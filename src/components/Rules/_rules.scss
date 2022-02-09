@@ -1,0 +1,49 @@
+.rules-wrapper {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  text-align: right;
+  font-size: 0.8em;
+  z-index: 50;
+
+  .btn {
+
+    &.active + .rules-content {
+      display: block;
+    }
+  }
+
+  .rules-content {
+    text-align: left;
+    margin-top: 6px;
+    padding: 6px 12px;
+    background-color: hsl(188, 12%, 40%);
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    display: none;
+    box-shadow: 0 2px 6px 3px rgba(0,0,0,0.2);
+
+    h2 {
+      margin-bottom: 12px;
+    }
+
+    .cards-rules {
+      margin: 0 0 3px;
+      padding: 0 0 3px;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+  }
+}
+
+@media screen and (max-width: 665px) {
+  .rules-wrapper {
+    font-size: 0.7em;
+  }
+
+  html {
+    background-color: $dark-blue;
+  }
+}

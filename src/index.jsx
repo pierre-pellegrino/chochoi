@@ -6,6 +6,7 @@ import PlayBtn from "./components/PlayBtn/PlayBtn";
 import CardDeck from "./components/CardDeck/CardDeck";
 import CoffeeBtn from "./components/CoffeeBtn/CoffeeBtn";
 import HeaderPic from "./components/HeaderPic/HeaderPic";
+import Rules from "./components/Rules/Rules";
 
 const App = () => {
   const gameID = localStorage.getItem('gameID') ? localStorage.getItem('gameID') : null;
@@ -19,6 +20,7 @@ const App = () => {
 
   return (
     <div className="global-wrapper">
+        <Rules />
         <Navbar />
         {!deckID && <HeaderPic />}
         {!deckID && <PlayBtn onNewDeck={handleSetDeckID}/>}

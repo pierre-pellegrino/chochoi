@@ -4,3 +4,9 @@ nav {
     color: $light;
   }
 }
+
+@media screen and (max-width: 570px) {
+  nav {
+    margin-top: 36px;
+  }
+}

@@ -4,6 +4,7 @@
 @import '../components/CardDeck/carddeck';
 @import '../components/ResetGame/resetgame';
 @import '../components/CoffeeBtn/coffeebtn.scss';
+@import '../components/Rules/rules';
 
 *, :before, :after {
   padding: 0;
@@ -61,6 +62,7 @@ body {
   -moz-transition: transform 0.3s;
   -ms-transition: transform 0.3s;
   -o-transition: transform 0.3s;
+  box-shadow: 0 2px 2px 1px rgba(0,0,0,0.3);
 
   &:hover {
     transform: scale(1.1);
@@ -81,6 +83,11 @@ body {
 
 .mb-1 {
   margin-bottom: 1em;
+}
+
+.bolder {
+  font-weight: bolder;
+  font-size: 1.1em;
 }
 
 .main-pic {
@@ -114,5 +121,11 @@ body {
 @media screen and (max-width: 665px) {
   .main-pic {
     width: 100%;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  body {
+    font-size: 0.9em;
   }
 }

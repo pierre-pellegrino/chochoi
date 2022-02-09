@@ -1,9 +1,5 @@
 const rules = [
   {
-    value: '0',
-    effect: "Tu es le <span class=\"colored\">Question Master</span>. <br /> Chaque fois que tu poses une question, si on te répond <span class=\"colored\">Ta gueule</span>, tu bois. Si la personne te répond normalement, elle boit. <br /> La prochaine personne à piocher un 10 récupère cet effet."
-  },
-  {
     value: '2',
     effect: "Tu te prends 2 gorgées."
   },
@@ -34,6 +30,10 @@ const rules = [
   {
     value: '9',
     effect: "Choisis un jeu, type <span class=\"colored\">Dans ma valise</span> ou <span class=\"colored\">J'ai déjà/ J'ai jamais</span>. <br /> Le perdant boit, pour changer."
+  },
+  {
+    value: '0',
+    effect: "Tu es le <span class=\"colored\">Question Master</span>. <br /> Chaque fois que tu poses une question, si on te répond <span class=\"colored\">Ta gueule</span>, tu bois. Si la personne te répond normalement, elle boit. <br /> La prochaine personne à piocher un 10 récupère cet effet."
   },
   {
     value: "J",
