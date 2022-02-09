@@ -1,0 +1,33 @@
+.coffee-wrapper {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  font-size: 0.6em;
+  background-color: rgba(255,255,255,0.1);
+  padding: 4px 0 12px;
+
+  p {
+    margin-bottom: 0.5em;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    padding: 4px 18px;
+    background-color: $primary;
+    border-radius: 18px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+    transition: background-color 0.3s;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $primary-dark;
+    }
+  }
+}

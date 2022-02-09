@@ -1,0 +1,23 @@
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  img {
+    max-width: 226px;
+    margin: 32px 0;
+  }
+}
+
+.cardboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .colored {
+    color: $light;
+  }
+
+  .draw-btn {
+    margin-top: 2em;
+  }
+}
