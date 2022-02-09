@@ -7,7 +7,7 @@ const CardDeck = ({deckID}) => {
   const [currentCard, setCurrentCard] = useState(null);
 
   const drawCard = () => {
-    fetch(`http://deckofcardsapi.com/api/deck/${deckID}/draw/?count=1`)
+    fetch(`https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=1`)
     .then((response => response.json()))
     .then((card => {
       setCurrentCard([card.cards[0].images.png, card.cards[0].code[0], card.remaining]);
