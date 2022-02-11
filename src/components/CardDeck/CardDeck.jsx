@@ -3,7 +3,7 @@ import cardBack from '../../assets/card-back.png'
 import rules from '../../data/rules';
 import ResetGame from '../ResetGame/ResetGame';
 
-const CardDeck = ({deckID}) => {
+const CardDeck = ({deckID, players}) => {
   const [currentCard, setCurrentCard] = useState(null);
 
   const drawCard = () => {
@@ -14,12 +14,15 @@ const CardDeck = ({deckID}) => {
     }))
   }
 
+  // A faire : Sauvegarder l'array de prénoms dans le localStorage
+
   const clearStorage = () => {
     localStorage.clear();
   }
-
+  const currentPlayer = currentCard && ((52 - currentCard[2]) % players.length);
   return (
     <div className="cardboard-wrapper">
+      <p className="colored player-name"> {currentPlayer === 0 ? players[players.length-1] : players[currentPlayer-1]} </p>
       <div className="card-wrapper">
         <img className="current-card" src={currentCard ? currentCard[0] : cardBack} alt="current card" />
       </div>

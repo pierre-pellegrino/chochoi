@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PlayBtn = ({onNewDeck}) => {
+const PlayBtn = ({onNewDeck, isDisabled}) => {
   
   const getDeckID = () => {
     fetch('https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
@@ -11,7 +11,7 @@ const PlayBtn = ({onNewDeck}) => {
   };
 
   return (
-    <button className="play-btn btn" onClick={getDeckID} type="button">Nouvelle partie</button>
+    <button disabled={isDisabled || null}className={`play-btn btn`} onClick={getDeckID} type="button">Nouvelle partie</button>
   );
 };
 

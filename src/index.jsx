@@ -13,6 +13,11 @@ const App = () => {
   const gameID = localStorage.getItem('gameID') ? localStorage.getItem('gameID') : null;
 
   const [deckID, setDeckID] = useState(gameID);
+  const [playersArray, setPlayersArray] = useState([]);
+
+  const handlePlayersArray = (value) => {
+    setPlayersArray((prev) => [...prev, value]);
+  }
 
   const handleSetDeckID = (id) => {
     setDeckID(id);
@@ -24,9 +29,9 @@ const App = () => {
         <Rules />
         <Navbar />
         {!deckID && <HeaderPic />}
-        {!deckID && <PlayersList />}
-        {!deckID && <PlayBtn onNewDeck={handleSetDeckID}/>}
-        {deckID && <CardDeck deckID={deckID}/>} 
+        {!deckID && <PlayersList onGetPlayers={handlePlayersArray} onNewDeck={handleSetDeckID} />}
+        {/* {!deckID && <PlayBtn onNewDeck={handleSetDeckID}/>} */}
+        {deckID && <CardDeck deckID={deckID} players={playersArray}/>} 
         {/* {!deckID && <CoffeeBtn />} */}
     </div>
   )
