@@ -1,0 +1,39 @@
+.players-list {
+  margin-top: 0.5em;
+
+  input[type=text] {
+    padding: 12px 24px;
+    width: 250px;
+    border-radius: 36px;
+    -webkit-border-radius: 36px;
+    -moz-border-radius: 36px;
+    -ms-border-radius: 36px;
+    -o-border-radius: 36px;
+    border: 0;
+    box-shadow: 0 2px 2px 1px rgb(0,0,0,0.3);
+    outline: none;
+    font-family: 'Mulish', sans-serif;
+    margin: 6px 0;
+  }
+
+  .players-btns {
+    margin-top: 0.3em;
+
+    button {
+      margin: 0 6px;
+
+      &.disabled {
+        pointer-events: none;
+        background-color: grey;
+      }
+    }
+  }
+
+  .red {
+    background-color: $red;
+  }
+
+  .green {
+    background-color: $light;
+  }
+}

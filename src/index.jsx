@@ -7,6 +7,7 @@ import CardDeck from "./components/CardDeck/CardDeck";
 import CoffeeBtn from "./components/CoffeeBtn/CoffeeBtn";
 import HeaderPic from "./components/HeaderPic/HeaderPic";
 import Rules from "./components/Rules/Rules";
+import PlayersList from "./components/PlayersList/PlayersList";
 
 const App = () => {
   const gameID = localStorage.getItem('gameID') ? localStorage.getItem('gameID') : null;
@@ -23,9 +24,10 @@ const App = () => {
         <Rules />
         <Navbar />
         {!deckID && <HeaderPic />}
+        {!deckID && <PlayersList />}
         {!deckID && <PlayBtn onNewDeck={handleSetDeckID}/>}
         {deckID && <CardDeck deckID={deckID}/>} 
-        {!deckID && <CoffeeBtn />}
+        {/* {!deckID && <CoffeeBtn />} */}
     </div>
   )
 };
