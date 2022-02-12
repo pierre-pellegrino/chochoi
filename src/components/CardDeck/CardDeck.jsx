@@ -14,15 +14,14 @@ const CardDeck = ({deckID, players}) => {
     }))
   }
 
-  // A faire : Sauvegarder l'array de prénoms dans le localStorage
-
   const clearStorage = () => {
     localStorage.clear();
   }
+  
   const currentPlayer = currentCard && ((52 - currentCard[2]) % players.length);
   return (
     <div className="cardboard-wrapper">
-      <p className="player-name"> <span className="colored">{currentPlayer === 0 ? players[players.length-1] : players[currentPlayer-1]}</span> a pioché : </p>
+      {currentCard && <p className="player-name"> <span className="colored">{currentPlayer === 0 ? players[players.length-1] : players[currentPlayer-1]}</span> a pioché : </p>}
       <div className="card-wrapper">
         <img className="current-card" src={currentCard ? currentCard[0] : cardBack} alt="current card" />
       </div>

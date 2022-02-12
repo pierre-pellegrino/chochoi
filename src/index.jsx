@@ -19,7 +19,6 @@ const App = () => {
 
   const handlePlayersArray = (value) => {
     setPlayersArray(value);
-    console.log(value);
     localStorage.setItem('playersArray', value);
   }
 
