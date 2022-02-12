@@ -35,7 +35,7 @@ const App = () => {
         {!deckID && <PlayersList onGetPlayers={handlePlayersArray} onNewDeck={handleSetDeckID} />}
         {/* {!deckID && <PlayBtn onNewDeck={handleSetDeckID}/>} */}
         {deckID && <CardDeck deckID={deckID} players={playersArray}/>} 
-        {/* {!deckID && <CoffeeBtn />} */}
+        {!deckID && <CoffeeBtn />}
     </div>
   )
 };
