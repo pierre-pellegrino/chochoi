@@ -22,7 +22,7 @@ const CardDeck = ({deckID, players}) => {
   const currentPlayer = currentCard && ((52 - currentCard[2]) % players.length);
   return (
     <div className="cardboard-wrapper">
-      <p className="colored player-name"> {currentPlayer === 0 ? players[players.length-1] : players[currentPlayer-1]} </p>
+      <p className="player-name"> <span className="colored">{currentPlayer === 0 ? players[players.length-1] : players[currentPlayer-1]}</span> a pioché : </p>
       <div className="card-wrapper">
         <img className="current-card" src={currentCard ? currentCard[0] : cardBack} alt="current card" />
       </div>

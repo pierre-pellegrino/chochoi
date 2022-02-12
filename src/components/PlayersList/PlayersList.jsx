@@ -19,7 +19,9 @@ const PlayersList = ({onNewDeck, onGetPlayers}) => {
   }, [playersNb, namedPlayersNb, inputRef]);
 
   const getArrayOfPlayers = () => {
-    inputRef.current.forEach(input => onGetPlayers(input.firstElementChild.firstElementChild.value));
+    let playersArr = [];
+    inputRef.current.forEach(input => playersArr.push(input.firstElementChild.firstElementChild.value));
+    onGetPlayers(playersArr);
   }
 
   const removePlayer = () => {
@@ -39,7 +41,9 @@ const PlayersList = ({onNewDeck, onGetPlayers}) => {
 
         <div className="players-btns">
           <button type="button" onClick={() => removePlayer()} className={`round-btn minus btn red ${playersNb<2 ? 'disabled' : ''}`}>-</button>
+          <span className="info minus">Supprimer un joueur</span>
           <button type="button" onClick={() => addPlayer()} className={`round-btn minus btn green ${playersNb>11 ? 'disabled' : ''}`}>+</button>
+          <span className="info plus">Ajouter un joueur</span>
         </div>
       </form>
       <div onClick={getArrayOfPlayers}><PlayBtn onNewDeck={onNewDeck} isDisabled={playersNb !== namedPlayersNb}/></div>
