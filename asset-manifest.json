@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/chochoi/static/css/main.328e2c5f.css",
-    "main.js": "/chochoi/static/js/main.18cd8369.js",
+    "main.css": "/chochoi/static/css/main.b4f90080.css",
+    "main.js": "/chochoi/static/js/main.f2dff9b4.js",
     "static/media/card-back.png": "/chochoi/static/media/card-back.fa3356f265c9c470bb13.png",
     "static/media/main-img.jpg": "/chochoi/static/media/main-img.d05f33d75822cbe77c09.jpg",
     "index.html": "/chochoi/index.html",
-    "main.328e2c5f.css.map": "/chochoi/static/css/main.328e2c5f.css.map",
-    "main.18cd8369.js.map": "/chochoi/static/js/main.18cd8369.js.map"
+    "main.b4f90080.css.map": "/chochoi/static/css/main.b4f90080.css.map",
+    "main.f2dff9b4.js.map": "/chochoi/static/js/main.f2dff9b4.js.map"
   },
   "entrypoints": [
-    "static/css/main.328e2c5f.css",
-    "static/js/main.18cd8369.js"
+    "static/css/main.b4f90080.css",
+    "static/js/main.f2dff9b4.js"
   ]
 }
